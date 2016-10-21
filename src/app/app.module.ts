@@ -4,20 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { SessionService } from './session.service';
-import { ShellComponent } from './shell/shell.component';
-import { ComposeComponent } from './compose/compose.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ShellComponent,
-    ComposeComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [SessionService],
   bootstrap: [AppComponent]

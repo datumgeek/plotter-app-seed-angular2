@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ShellModule } from 'plotter-shell-angular2/dist/shell.module';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', loadChildren: () => ShellModule }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  declarations: [],
+  imports: [RouterModule.forRoot(routes), ShellModule],
   exports: [RouterModule],
   providers: []
 })
-export class A2dynRoutingModule { }
+export class AppRoutingModule { }

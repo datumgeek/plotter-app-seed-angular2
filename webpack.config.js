@@ -1,10 +1,12 @@
 /// <binding ProjectOpened='Watch - Development' /> 
 
 var webpack = require("webpack");
+var path = require('path');
+
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 require("es6-promise").polyfill();
 var WebpackNotifierPlugin = require('webpack-notifier');
-var path = require('path');
+
 module.exports = {
     context: path.join(__dirname, 'src'),
     entry: {
@@ -30,7 +32,8 @@ module.exports = {
         new webpack.ExtendedAPIPlugin()        //new ExtractTextPlugin("style.css", { allChunks: true })
     ],
     resolve: {
-        extensions: ['', '.ts', '.js']
+        extensions: ['', '.js', '.ts']
+        , modules: [ path.join(path.resolve(__dirname, "../.."), "node_modules"), path.join(__dirname, "node_modules") ]
     },
     // devtool: 'eval',
     externals: [
