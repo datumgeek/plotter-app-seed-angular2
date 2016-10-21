@@ -10,8 +10,8 @@ var WebpackNotifierPlugin = require('webpack-notifier');
 module.exports = {
     context: path.join(__dirname, 'src'),
     entry: {
-        Bundle: "./main.ts",
-        Vendor: './vendor.js'
+        bundle: "./main.ts",
+        vendor: './vendor.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -33,7 +33,6 @@ module.exports = {
     ],
     resolve: {
         extensions: ['', '.js', '.ts']
-        , modules: [ path.join(path.resolve(__dirname, "../.."), "node_modules"), path.join(__dirname, "node_modules") ]
     },
     // devtool: 'eval',
     externals: [

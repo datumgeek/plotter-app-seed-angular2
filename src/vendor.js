@@ -10,5 +10,3 @@ var jQuery = require("jquery");
 var toastr = require("toastr");
 //var zone = require("zone.js/dist/zone.js");
 var Reflect = require("reflect-metadata/Reflect.js");
-
-var shellLib = require("plotter-shell-angular2/dist/index");
