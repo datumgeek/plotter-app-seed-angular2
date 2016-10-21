@@ -1,6 +1,7 @@
 import './polyfills.ts';
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { enableProdMode } from '@angular/core';
 import { environment } from './environments/environment';
 import { AppModule } from './app/app.module';
@@ -27,4 +28,7 @@ var exportedModules = {
   }
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+platformBrowserDynamic().bootstrapModule(AppModule, 
+    [
+        { provide: LocationStrategy, useClass: HashLocationStrategy }
+    ]);
