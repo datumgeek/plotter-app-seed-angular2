@@ -3,9 +3,11 @@
 var webpack = require("webpack");
 var path = require('path');
 
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
-require("es6-promise").polyfill();
-var WebpackNotifierPlugin = require('webpack-notifier');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+const styles = [];
+const scripts = [];
 
 module.exports = {
     context: path.join(__dirname, 'src'),
@@ -26,17 +28,34 @@ module.exports = {
     },
     watch: true,
 
-    plugins: [
-        new WebpackNotifierPlugin(),
-        new webpack.ProvidePlugin({ $: "jquery", jQuery: "jquery" }),
-        new webpack.ExtendedAPIPlugin()        //new ExtractTextPlugin("style.css", { allChunks: true })
-    ],
     resolve: {
-        extensions: ['', '.js', '.ts']
+        extensions: ['.ts', '.js'],
+        modules: [path.resolve('./', 'node_modules')]
     },
+
+    plugins: [
+        new webpack.DefinePlugin({
+            'WEBPACK_ENV': '"dev"'
+        })
+        // , new HtmlWebpackPlugin({
+        //     template: path.resolve('./', '.'),
+        //     chunksSortMode: 'dependency'
+        // })
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     // Optimizing ensures loading order in index.html
+        //     name: ['styles', 'scripts', 'main'].reverse()
+        // }),
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     minChunks: Infinity,
+        //     name: 'inline',
+        //     filename: 'inline.js',
+        //     sourceMapFilename: 'inline.map'
+        // })
+    ],
+
     // devtool: 'eval',
     externals: [
-        function(context, request, callback) {
+        function (context, request, callback) {
             if (/^dojo/.test(request) ||
                 /^dojox/.test(request) ||
                 /^dijit/.test(request) ||
@@ -49,45 +68,19 @@ module.exports = {
     ],
     devtool: 'source-map',
     module: {
-        loaders: [
-            { test: require.resolve("jquery"), loader: "expose?$!expose?jQuery!" },
-            // {
-            //     test: /\.css$/,
-            //     loader: ExtractTextPlugin.extract("style-loader", "css-loader")
-            // },
-            {
-                test: /\.html$/,
-                loader: 'html'
-            },
-            {
-                test: /\.css$/,
-                loaders: ["to-string-loader", "css-loader"] //style-loader!css-loader"
-            },
-            /*{
-                test: /\.ts/,
-                loaders: ['ts-loader'],
-                exclude: [/node_modules/, /.*\.spec\.ts$/]
-            },*/
-            {
-                test: /\.ts$/,
-                loaders: ['awesome-typescript-loader', 'angular2-template-loader']
-            },
-            {
-                test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-                loader: "url?limit=10000&mimetype=application/font-woff"
-            }, {
-                test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-                loader: "url?limit=10000&mimetype=application/font-woff"
-            }, {
-                test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-                loader: "url?limit=10000&mimetype=application/octet-stream"
-            }, {
-                test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-                loader: "file"
-            }, {
-                test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-                loader: "url?limit=10000&mimetype=image/svg+xml"
-            }
+        rules: [
+            // { enforce: 'pre', test: /\.ts$/, exclude: /node_modules/, loader: 'tslint' },
+            //         loaders: ['awesome-typescript-loader', 'angular2-template-loader'],
+            //             exclude: [/\.(spec|e2e)\.ts$/]
+            // { test: /\.ts$/, exclude: /node_modules/, loader: 'ts' },
+            { test: /\.ts$/, exclude: /node_modules/, loaders: ['awesome-typescript-loader', 'angular2-template-loader'] },
+            { test: /\.json$/, loader: 'json' },
+            { test: /\.html/, loader: 'html?minimize=false' },
+            { test: /\.styl$/, loader: 'css!stylus' },
+            { test: /\.css$/, loaders: ['to-string-loader', 'css-loader' ] },
+            { test: /\.(gif|png|jpe?g)$/i, loader: 'file?name=dist/images/[name].[ext]' },
+            { test: /\.woff2?$/, loader: 'url?name=dist/fonts/[name].[ext]&limit=10000&mimetype=application/font-woff' },
+            { test: /\.(ttf|eot|svg)$/, loader: 'file?name=dist/fonts/[name].[ext]' }
         ]
     }
 };
