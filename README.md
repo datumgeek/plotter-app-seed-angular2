@@ -25,4 +25,4 @@ comment out `declare function require` line as shown below (prevents error about
 
 ### launch chrome browser
 
-got to http://localhost:9000
+got to [http://localhost:9000](http://localhost:9000)
