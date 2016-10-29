@@ -78,6 +78,7 @@ module.exports = {
             { test: /\.html/, loader: 'html?minimize=false' },
             { test: /\.styl$/, loader: 'css!stylus' },
             { test: /\.css$/, loaders: ['to-string-loader', 'css-loader' ] },
+            { test: /\.less$/, loaders: ['to-string-loader', 'css-loader', 'less-loader' ] },
             { test: /\.(gif|png|jpe?g)$/i, loader: 'file?name=dist/images/[name].[ext]' },
             { test: /\.woff2?$/, loader: 'url?name=dist/fonts/[name].[ext]&limit=10000&mimetype=application/font-woff' },
             { test: /\.(ttf|eot|svg)$/, loader: 'file?name=dist/fonts/[name].[ext]' }
