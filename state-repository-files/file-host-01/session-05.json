@@ -21,8 +21,10 @@
                     "title": "Top Ten Wind Farms",
                     "viewId": "view3",
                     "paneType": "nav",
-                    "viewModel": "//plotter.github.io/plotter-view-samples/views/wind-farm-top-ten/wind-farm-top-ten.js",
-                    "viewState": "{ a: 'hello, world (three)' }"
+                    "cmodule": "//datumgeek.github.io/plotter-view-samples-angular2/views/views.module",
+                    "component": "WindFarmTopTenComponent",
+                    "state": { "a": "hello, world (three)" }
+                    // "viewModel": "//plotter.github.io/plotter-view-samples/views/wind-farm-top-ten/wind-farm-top-ten.js",
                 },
                 {
                     "uniqueId": "vi-07",
