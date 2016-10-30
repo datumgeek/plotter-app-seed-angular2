@@ -15,50 +15,49 @@
                     "paneType": "main",
                     "viewModel": "//plotter.github.io/plotter-view-samples/views/windmills/windmills.js",
                     "viewState": "{ a: 'hello, world (three)' }"
-                },
-                {
+                }
+                , {
                     "uniqueId": "vi-07",
                     "title": "Top Ten Wind Farms",
                     "viewId": "view3",
                     "paneType": "nav",
-                    "cmodule": "//datumgeek.github.io/plotter-view-samples-angular2/views/views.module",
+                    "cmodule": "plotter-view-samples-angular2/views/viewSamples.module",
                     "component": "WindFarmTopTenComponent",
                     "state": { "a": "hello, world (three)" }
-                    // "viewModel": "//plotter.github.io/plotter-view-samples/views/wind-farm-top-ten/wind-farm-top-ten.js",
-                },
-                {
+                }
+                , {
                     "uniqueId": "vi-07",
                     "title": "Globe Matterhorn",
                     "viewId": "view3",
                     "paneType": "main",
                     "viewModel": "//plotter.github.io/plotter-view-samples/views/globe-simple-rotation/globe-simple-rotation.js",
                     "viewState": "{ a: 'hello, world (three)' }"
-                },
-                {
+                }
+                , {
                     "uniqueId": "vi-07",
                     "title": "Globe View",
                     "viewId": "view3",
                     "paneType": "main",
                     "viewModel": "//plotter.github.io/plotter-view-samples/views/globe-view/globe-view.js",
                     "viewState": "{ a: 'hello, world (three)' }"
-                },
-                {
+                }
+                , {
                     "uniqueId": "vi-07",
                     "title": "Tree Map",
                     "viewId": "view3",
                     "paneType": "main",
                     "viewModel": "//plotter.github.io/plotter-view-samples/views/treemap/treemap.js",
                     "viewState": "{ a: 'hello, world (three)' }"
-                },
-                {
+                }
+                , {
                     "uniqueId": "vi-06",
                     "title": "Test02",
                     "viewId": "view3",
                     "paneType": "main",
                     "viewTemplate": "//cmichaelgraham.github.io/plotter/views/test02/test02.html",
                     "viewState": "{ a: 'hello, world (three)' }"
-                },
-                {
+                }
+                , {
                     "uniqueId": "vi-05",
                     "title": "Simple View",
                     "viewId": "view3",

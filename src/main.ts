@@ -12,10 +12,14 @@ if (environment.production) {
 
 // define the exported modules from this application
 var exportedModules = {
+  "@angular/common": require('@angular/common'),
+  //"@angular/compiler": require('@angular/compiler'),
   "@angular/core": require('@angular/core'),
   "@angular/forms": require('@angular/forms'),
   "@angular/platform-browser": require('@angular/platform-browser'),
-  "@angular/http": require('@angular/http')
+  "@angular/platform-browser-dynamic": require('@angular/platform-browser-dynamic'),
+  "@angular/http": require('@angular/http'),
+  "@angular/router": require('@angular/router')
 };
 
 // externally "define" (in the requirejs / dojo sense) the modules that are exported

@@ -7,9 +7,9 @@
 	<base href="/">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="./node_modules/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="/styles.css">
+	<link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./node_modules/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/styles.css">
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
@@ -17,14 +17,39 @@
 	<app-root>Loading...</app-root>
 </body>
 
+<script>
+  window.plotterPathManifest = {
+    'http://localhost:9000': {
+      'plotter-view-samples-angular2': 'http://localhost:9010'
+    },
+
+    'https://datumgeek.github.io/plotter-app-seed-angular2': {
+      'plotter-view-samples-angular2': 'https://datumgeek.github.io/plotter-view-samples-angular2'
+    }
+  }
+
+  for (var property in window.plotterPathManifest) {
+    if (window.plotterPathManifest.hasOwnProperty(property)) {
+        if (document.URL.startsWith(property)) {
+          window.plotterPaths = window.plotterPathManifest[property];
+        }
+    }
+  }
+  
+  if (!window.plotterPaths) {
+    alert('fatal error: app is running on unknown host.');
+  }
+
+</script>
+
 
 <!-- 1. Configure and load ESRI libraries -->
 <script>
       window.dojoConfig = {
         async: true,
-        paths: {
-          views: 'http://localhost:9000/src/views'
-        }
+        paths: window.plotterPaths
+        
+        //{ views: 'http://localhost:9000/src/views' }
       };
   </script>
 <script src="http://js.arcgis.com/3.16/"></script>
