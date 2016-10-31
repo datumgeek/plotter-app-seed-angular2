@@ -44,6 +44,15 @@
                     "component": "TreemapComponent",
                     "state": { "a": "hello, world (three)" }
                 }
+                , {
+                    "uniqueId": "vi-09",
+                    "title": "Splitter",
+                    "viewId": "splitter3",
+                    "paneType": "alt",
+                    "cmodule": "plotter-view-lab-angular2/views/viewLab.module",
+                    "component": "SplitterComponent",
+                    "state": { "a": "hello, world (three)" }
+                }
             ]
         }
     ]
