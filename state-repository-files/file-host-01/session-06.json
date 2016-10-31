@@ -26,6 +26,24 @@
                     "component": "TreemapComponent",
                     "state": { "a": "hello, world (three)" }
                 }
+                , {
+                    "uniqueId": "vi-07",
+                    "title": "Top Ten Wind Farms",
+                    "viewId": "view3",
+                    "paneType": "main",
+                    "cmodule": "plotter-view-samples-angular2/views/viewSamples.module",
+                    "component": "WindFarmTopTenComponent",
+                    "state": { "a": "hello, world (three)" }
+                }
+                , {
+                    "uniqueId": "vi-07",
+                    "title": "Tree Map",
+                    "viewId": "view3",
+                    "paneType": "alt",
+                    "cmodule": "plotter-view-samples-angular2/views/viewSamples.module",
+                    "component": "TreemapComponent",
+                    "state": { "a": "hello, world (three)" }
+                }
             ]
         }
     ]
