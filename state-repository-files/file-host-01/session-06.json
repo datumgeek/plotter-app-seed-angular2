@@ -50,7 +50,7 @@
                     "viewId": "splitter3",
                     "paneType": "alt",
                     "cmodule": "plotter-view-lab-angular2/views/viewLab.module",
-                    "component": "SplitterComponent",
+                    "component": "LeftRightSplitterComponent",
                     "state": { "a": "hello, world (three)" }
                 }
                 , {
