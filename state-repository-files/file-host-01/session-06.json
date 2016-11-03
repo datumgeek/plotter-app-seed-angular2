@@ -45,6 +45,15 @@
                     "state": { "a": "hello, world (three)" }
                 }
                 , {
+                    "uniqueId": "vi-07a",
+                    "title": "Sunburst",
+                    "viewId": "view3a",
+                    "paneType": "main",
+                    "cmodule": "plotter-view-samples-angular2/views/viewSamples.module",
+                    "component": "SunburstComponent",
+                    "state": { "a": "hello, world (three)" }
+                }
+                , {
                     "uniqueId": "vi-09",
                     "title": "Splitter",
                     "viewId": "splitter3",
