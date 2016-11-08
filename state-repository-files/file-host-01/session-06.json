@@ -15,13 +15,14 @@
                     "paneType": "nav",
                     "cmodule": "plotter-view-samples-angular2/views/viewSamples.module",
                     "component": "WindFarmTopTenComponent",
-                    "state": { "a": "hello, world (three)" }
+                    "state": { "projectid": "4573" },
+                    "hideClose": true
                 }
                 , {
                     "uniqueId": "vi-07",
                     "title": "Tree Map",
                     "viewId": "view3",
-                    "paneType": "main",
+                    "paneType": "nav",
                     "cmodule": "plotter-view-samples-angular2/views/viewSamples.module",
                     "component": "TreemapComponent",
                     "state": { "a": "hello, world (three)" }
@@ -33,7 +34,8 @@
                     "paneType": "main",
                     "cmodule": "plotter-view-samples-angular2/views/viewSamples.module",
                     "component": "WindFarmTopTenComponent",
-                    "state": { "a": "hello, world (three)" }
+                    "state": { "a": "hello, world (three)" },
+                    "hideClose": true
                 }
                 , {
                     "uniqueId": "vi-07",
