@@ -20,7 +20,8 @@ var exportedModules = {
   "@angular/platform-browser-dynamic": require('@angular/platform-browser-dynamic'),
   "@angular/http": require('@angular/http'),
   "@angular/router": require('@angular/router'),
-  "plotter-shell-angular2/dist/index": require('plotter-shell-angular2/dist/index')
+  "plotter-shell-angular2/dist/index": require('plotter-shell-angular2/dist/index'),
+  "rxjs/Rx": require('rxjs/Rx')
 };
 
 // externally "define" (in the requirejs / dojo sense) the modules that are exported
