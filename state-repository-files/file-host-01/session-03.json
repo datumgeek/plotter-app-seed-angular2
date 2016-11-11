@@ -10,9 +10,19 @@
             "viewInstances": [
                 {
                     "uniqueId": "vi-06",
-                    "title": "Top Ten Wind Farms",
+                    "title": "State Taxes",
                     "viewId": "view3",
                     "paneType": "nav",
+                    "cmodule": "plotter-view-samples-angular2/views/viewSamples.module",
+                    "component": "StateTaxesComponent",
+                    "state": { "a": "hello, world (three)" },
+                    "hideClose": true
+                }
+                , {
+                    "uniqueId": "vi-09",
+                    "title": "State Taxes",
+                    "viewId": "view3",
+                    "paneType": "main",
                     "cmodule": "plotter-view-samples-angular2/views/viewSamples.module",
                     "component": "StateTaxesComponent",
                     "state": { "a": "hello, world (three)" },
