@@ -1,6 +1,6 @@
 {
     "locked": true,
-    "uniqueId": "session-04",
+    "uniqueId": "session-03",
     "activePaks": [
         {
             "locked": true,
@@ -9,12 +9,24 @@
             "pakId": "pak-01",
             "viewInstances": [
                 {
-                    "uniqueId": "vi-07",
-                    "title": "US Windmills",
+                    "uniqueId": "vi-06",
+                    "title": "Page Layout Test",
                     "viewId": "view3",
                     "paneType": "main",
-                    "viewModel": "//plotter.github.io/plotter-view-samples/views/simple-wind/simple-wind.js",
-                    "viewState": "{ a: 'hello, world (three)' }"
+                    "cmodule": "plotter-view-samples-angular2/views/viewSamples.module",
+                    "component": "PageLayoutTestComponent",
+                    "state": { "a": "hello, world (three)" },
+                    "hideClose": true
+                }
+                , {
+                    "uniqueId": "vi-07",
+                    "title": "Tab Layout Test",
+                    "viewId": "view3",
+                    "paneType": "alt",
+                    "cmodule": "plotter-view-samples-angular2/views/viewSamples.module",
+                    "component": "TabLayoutTestComponent",
+                    "state": { "a": "hello, world (three)" },
+                    "hideClose": true
                 }
             ]
         }
