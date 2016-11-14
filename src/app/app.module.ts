@@ -7,6 +7,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ShellModule } from 'plotter-shell-angular2/dist';
+import { ShellProidersModule } from 'plotter-shell-angular2/dist';
 import { SessionService } from './session.service';
 
 @NgModule({
