@@ -52039,7 +52039,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
                 ],
                 bootstrap: [
                     app_component_1.AppComponent, [
-                        { provide: common_2.APP_BASE_HREF, useValue: window['_app_base'] || '/' },
+                        { provide: common_2.APP_BASE_HREF, useValue: window['_app_base'] || '/' }
                     ]
                 ]
             }), 

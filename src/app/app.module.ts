@@ -27,7 +27,7 @@ import { SessionService } from './session.service';
   ],
   bootstrap: [
     AppComponent, [
-      { provide: APP_BASE_HREF, useValue: window['_app_base'] || '/' },
+      { provide: APP_BASE_HREF, useValue: window['_app_base'] || '/' }
     ]
   ]
 })
