@@ -22,13 +22,13 @@ import { SessionService } from './session.service';
     BrowserModule
   ],
   providers: [
-    SessionService, 
+    SessionService,
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
   ],
   bootstrap: [
     AppComponent, [
       { provide: APP_BASE_HREF, useValue: window['_app_base'] || '/' },
-      { provide: LocationStrategy, useClass: HashLocationStrategy },
     ]
-]
+  ]
 })
 export class AppModule { }
