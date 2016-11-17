@@ -6,9 +6,9 @@
 	<title>plotter-app-seed-angular2</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="./bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="/styles.css">
+	<link rel="stylesheet" type="text/css" href="./styles.css">
 
 	<base href="/">
   <script>
@@ -75,7 +75,7 @@
         define: window.define
       };
 
-      require(["/dist/vendor.js", "/dist/bundle.js"], function (vendor, main) {
+      require(["./dist/vendor.js", "./dist/bundle.js"], function (vendor, main) {
         window.plotter.start();
       });
 
