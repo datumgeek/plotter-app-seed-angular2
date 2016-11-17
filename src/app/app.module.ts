@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { APP_BASE_HREF, Location } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -20,7 +21,11 @@ import { SessionService } from './session.service';
     ShellProvidersModule,
     BrowserModule
   ],
-  providers: [SessionService, { provide: LocationStrategy, useClass: HashLocationStrategy },],
+  providers: [
+    SessionService, 
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    { provide: APP_BASE_HREF, useValue: window['_app_base'] || '/' },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
