@@ -52038,9 +52038,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
                     { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy },
                     { provide: common_2.APP_BASE_HREF, useValue: window['_app_base'] || '/' },
                 ],
-                bootstrap: [
-                    app_component_1.AppComponent
-                ]
+                bootstrap: [app_component_1.AppComponent]
             }), 
             __metadata('design:paramtypes', [])
         ], AppModule);
