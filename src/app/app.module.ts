@@ -23,7 +23,7 @@ import { SessionService } from './session.service';
   ],
   providers: [
     SessionService, 
-    { provide: APP_BASE_HREF, useValue: '/' }, // window['_app_base'] || '/' },
+    { provide: APP_BASE_HREF, useValue: '/plotter-app-seed-angular2/#/' }, // window['_app_base'] || '/' },
     { provide: LocationStrategy, useClass: HashLocationStrategy },
   ],
   bootstrap: [AppComponent]
