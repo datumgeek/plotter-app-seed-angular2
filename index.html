@@ -29,11 +29,13 @@
 <script>
   window.plotterPathManifest = {
     'http://localhost:9000': {
+      'home': 'http://localhost:9010',
       'plotter-view-samples-angular2': 'http://localhost:9010',
       'plotter-view-lab-angular2': 'http://localhost:9020'
     },
 
     'https://datumgeek.github.io/plotter-app-seed-angular2': {
+      'home': 'https://datumgeek.github.io/plotter-app-seed-angular2',
       'plotter-view-samples-angular2': 'https://datumgeek.github.io/plotter-view-samples-angular2',
       'plotter-view-lab-angular2': 'https://datumgeek.github.io/plotter-view-lab-angular2'
     }
@@ -75,7 +77,7 @@
         define: window.define
       };
 
-      require(["./dist/vendor.js", "./dist/bundle.js"], function (vendor, main) {
+      require([plotterPaths['home'] + "/dist/vendor.js", plotterPaths['home'] + "/dist/bundle.js"], function (vendor, main) {
         window.plotter.start();
       });
 
