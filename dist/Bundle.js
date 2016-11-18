@@ -85264,8 +85264,8 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
         }
     };
     platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule, [
-        { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy },
         { provide: common_1.APP_BASE_HREF, useValue: window['_app_base'] || '/' },
+        { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy },
     ]);
 }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 // , [

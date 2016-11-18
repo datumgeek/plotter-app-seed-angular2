@@ -36,9 +36,8 @@ var exportedModules = {
 
 platformBrowserDynamic().bootstrapModule(AppModule
   , [
-    { provide: LocationStrategy, useClass: HashLocationStrategy },
     { provide: APP_BASE_HREF, useValue: window['_app_base'] || '/' },
-
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
   ]);
     // , [
     //     { provide: LocationStrategy, useClass: HashLocationStrategy }
