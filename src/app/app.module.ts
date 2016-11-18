@@ -24,7 +24,7 @@ import { SessionService } from './session.service';
   providers: [
     SessionService,
     { provide: LocationStrategy, useClass: HashLocationStrategy },
-    { provide: APP_BASE_HREF, useValue: window['_app_base'] || '/' },
+    { provide: APP_BASE_HREF, useValue: /*window['_app_base'] ||*/ '.' },
   ],
   bootstrap: [AppComponent]
 })
