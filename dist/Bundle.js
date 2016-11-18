@@ -85266,14 +85266,6 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
     };
     platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule);
 }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-// , [
-//   { provide: APP_BASE_HREF, useValue: window['_app_base'] || '/' },
-//   { provide: LocationStrategy, useClass: HashLocationStrategy },
-// ]);
-// , [
-//     { provide: LocationStrategy, useClass: HashLocationStrategy }
-// ]
-//);
 
 
 /***/ }
