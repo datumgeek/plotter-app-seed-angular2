@@ -1,7 +1,7 @@
 import './polyfills.ts';
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { LocationStrategy, HashLocationStrategy, APP_BASE_HREF } from '@angular/common';
 import { enableProdMode } from '@angular/core';
 import { environment } from './environments/environment';
 import { AppModule } from './app/app.module';
@@ -26,7 +26,7 @@ var exportedModules = {
 
 // externally "define" (in the requirejs / dojo sense) the modules that are exported
 (<any>window).plotter.start = () => {
-  for(let key in exportedModules) {
+  for (let key in exportedModules) {
     (<any>window).plotter.define(key, [], () => {
       let fn = exportedModules[key];
       return fn;
@@ -34,8 +34,13 @@ var exportedModules = {
   }
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule 
+platformBrowserDynamic().bootstrapModule(AppModule
+  , [
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    { provide: APP_BASE_HREF, useValue: window['_app_base'] || '/' },
+
+  ]);
     // , [
     //     { provide: LocationStrategy, useClass: HashLocationStrategy }
     // ]
-    );
+    //);
