@@ -52017,7 +52017,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var __decorate =
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(/*! @angular/core */ 1), __webpack_require__(/*! @angular/platform-browser */ 121), __webpack_require__(/*! @angular/forms */ 120), __webpack_require__(/*! @angular/http */ 95), __webpack_require__(/*! @angular/common */ 43), __webpack_require__(/*! @angular/common */ 43), __webpack_require__(/*! ./app.component */ 542), __webpack_require__(/*! ./app-routing.module */ 541), __webpack_require__(/*! plotter-shell-angular2/dist */ 268), __webpack_require__(/*! plotter-shell-angular2/dist */ 268), __webpack_require__(/*! ./session.service */ 543)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, core_1, platform_browser_1, forms_1, http_1, common_1, common_2, app_component_1, app_routing_module_1, dist_1, dist_2, session_service_1) {
+!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(/*! @angular/core */ 1), __webpack_require__(/*! @angular/platform-browser */ 121), __webpack_require__(/*! @angular/forms */ 120), __webpack_require__(/*! @angular/http */ 95), __webpack_require__(/*! @angular/common */ 43), __webpack_require__(/*! ./app.component */ 542), __webpack_require__(/*! ./app-routing.module */ 541), __webpack_require__(/*! plotter-shell-angular2/dist */ 268), __webpack_require__(/*! plotter-shell-angular2/dist */ 268), __webpack_require__(/*! ./session.service */ 543)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, core_1, platform_browser_1, forms_1, http_1, common_1, app_component_1, app_routing_module_1, dist_1, dist_2, session_service_1) {
     "use strict";
     var AppModule = (function () {
         function AppModule() {
@@ -52036,7 +52036,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
                 providers: [
                     session_service_1.SessionService,
                     { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy },
-                    { provide: common_2.APP_BASE_HREF, useValue: /*window['_app_base'] ||*/ '.' },
                 ],
                 bootstrap: [app_component_1.AppComponent]
             }), 
@@ -85267,6 +85266,14 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
     };
     platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule);
 }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+// , [
+//   { provide: APP_BASE_HREF, useValue: window['_app_base'] || '/' },
+//   { provide: LocationStrategy, useClass: HashLocationStrategy },
+// ]);
+// , [
+//     { provide: LocationStrategy, useClass: HashLocationStrategy }
+// ]
+//);
 
 
 /***/ }

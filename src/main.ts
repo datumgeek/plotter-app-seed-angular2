@@ -34,7 +34,7 @@ var exportedModules = {
   }
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule
+platformBrowserDynamic().bootstrapModule(AppModule);
   // , [
   //   { provide: APP_BASE_HREF, useValue: window['_app_base'] || '/' },
   //   { provide: LocationStrategy, useClass: HashLocationStrategy },
@@ -42,4 +42,4 @@ platformBrowserDynamic().bootstrapModule(AppModule
     // , [
     //     { provide: LocationStrategy, useClass: HashLocationStrategy }
     // ]
-    );
+    //);
