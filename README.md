@@ -9,13 +9,22 @@ seed app for building angular2 based plotter apps
 npm install -g webpack
 npm install -g webpack-dev-server
 npm install
+npm run build
 
-# in one shell:
-webpack
+# in another shell:
+webpack --watch
 
 # in another shell:
 webpack-dev-server
 ```
+
+### view samples
+
+to run the ***view samples***, see [view samples readme](https://github.com/datumgeek/plotter-view-samples-angular2#quick-start)
+
+### view lab
+
+to run the ***view lab***, see [view lab readme](https://github.com/datumgeek/plotter-view-lab-angular2#quick-start)
 
 ### edit dojo type definitions
 
