@@ -85254,7 +85254,8 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
         "@angular/http": __webpack_require__(/*! @angular/http */ 95),
         "@angular/router": __webpack_require__(/*! @angular/router */ 69),
         "plotter-shell-angular2/dist/index": __webpack_require__(/*! plotter-shell-angular2/dist/index */ 176),
-        "rxjs/Rx": __webpack_require__(/*! rxjs/Rx */ 122)
+        "rxjs/Rx": __webpack_require__(/*! rxjs/Rx */ 122),
+        "rxjs/Observable": __webpack_require__(/*! rxjs/Observable */ 0)
     };
     // externally "define" (in the requirejs / dojo sense) the modules that are exported
     window.plotter.start = function () {

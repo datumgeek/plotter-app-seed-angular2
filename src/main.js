@@ -14,7 +14,8 @@ define(["require", "exports", '@angular/platform-browser-dynamic', '@angular/cor
         "@angular/http": require('@angular/http'),
         "@angular/router": require('@angular/router'),
         "plotter-shell-angular2/dist/index": require('plotter-shell-angular2/dist/index'),
-        "rxjs/Rx": require('rxjs/Rx')
+        "rxjs/Rx": require('rxjs/Rx'),
+        "rxjs/Observable": require('rxjs/Observable')
     };
     // externally "define" (in the requirejs / dojo sense) the modules that are exported
     window.plotter.start = function () {
